@@ -40,6 +40,8 @@ hl.genToHex(hl.genFromLch([lch[0], lch[1], (lch[2] + 120) % 360]));
 hl.difference('#ff0000', '#00ff00');        // 0.148 — trained metric (COMBVD-fit), saturates ~0.15
 hl.euclideanDistance('#000000', '#ffffff'); // 1.12 — fast ΔE76-style (alias of deltaE)
 hl.contrastRatio('#ffffff', '#3b82f6');     // 3.68 (WCAG 2.1)
+hl.deltaE2000('#ff0000', '#00ff00');        // 86.61 — industry-standard CIEDE2000 (CIELAB scale 0-100)
+hl.nearestColor('#fbf0d0', palette);        // catalog matching: {hex, index, distance, runnerUp, margin}
 hl.differenceWithConfidence('#808080', '#828282');
 // { de:0.0117, latent, disagreement, reliability:0.41, pNoticeable:0.077, reliable:false, extrapolated:false }
 
